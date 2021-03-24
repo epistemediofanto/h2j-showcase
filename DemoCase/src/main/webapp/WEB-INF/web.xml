@@ -30,7 +30,7 @@
 
 	<filter>
 		<filter-name>H2J</filter-name>
-		<filter-class>org.zaleuco.h2f.filter.H2JXFilter</filter-class>
+		<filter-class>org.brioscia.h2j.filter.H2JXFilter</filter-class>
 	</filter>
 
 	<filter-mapping>

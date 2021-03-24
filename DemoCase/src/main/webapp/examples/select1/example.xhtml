@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:j="http://java.h2j.org">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+	<form action="target.xhtml" method="post" id="my_form">
+
+		<j:select title="Tipo" id="tipo" value="#{select1.valore}"
+			required="true">
+			<j:repeat var="v" values="#{select1.lista}">
+				<option value="#{v.valore}"><j:out value="#{v.nome}" /></option>
+			</j:repeat>
+		</j:select>
+		<input type="submit" />
+	</form>
+
+</body>
+</html>

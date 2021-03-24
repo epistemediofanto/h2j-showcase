@@ -3,16 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <script type="text/javascript">
-
-function show(id) {
-	document.getElementById(id).removeAttribute("hidden"); 
-}
-
+	function show(id) {
+		document.getElementById(id).removeAttribute("hidden");
+	}
 </script>
 </head>
 <body>
 
-	<j:form action="#{oggettoForm.addDato(o)}">
+	<j:form action="#{oggettoForm3.addDato(o)}">
 		<table>
 			<tr>
 				<th>Indice</th>
@@ -22,22 +20,24 @@ function show(id) {
 				<th>Data</th>
 				<th>Numero</th>
 			</tr>
-			<j:repeat var="v" values="#{oggettoForm.dati}" index="ix" size="n">
+			<j:repeat var="v" values="#{oggettoForm3.dati}" index="ix" size="n">
 				<tr>
 					<td><j:out value="#{ix}" /> di <j:out value="#{n}" /></td>
 					<td><j:out value="#{v.nome}" /></td>
-					<td><j:out value="#{oggettoForm.dati.get(ix-1).cognome}" /></td>
+					<td><j:out value="#{oggettoForm3.dati.get(ix-1).cognome}" /></td>
+					<!-- same as v.cognome -->
 					<td><j:out value="#{v.nascita}" format="%1$td/%1$tm/%1$ty" /></td>
 					<td><j:out value="#{v.data}" /></td>
 					<td><j:out value="#{v.numero}" /></td>
 				</tr>
 			</j:repeat>
-			<j:declare var="o" bean="org.zaleuco.example.Dato" />
+			<j:declare var="o" bean="org.brioscia.h2j.example.form3.Dato3" />
 			<tr hidden="true" id="nuovo">
 				<td></td>
 				<td><j:input type="text" value="#{o.nome}" /></td>
 				<td><j:input type="text" value="#{o.cognome}" /></td>
-				<td><j:input type="text" value="#{o.nascita}" placeholder="dd/mm/yyyy" shape="dmyDate" /></td>
+				<td><j:input type="text" value="#{o.nascita}"
+						placeholder="dd/mm/yyyy" shape="dmyDate" /></td>
 				<td><j:input type="text" value="#{o.data}" /></td>
 				<td><j:input type="text" value="#{o.numero}" /></td>
 				<td></td>
