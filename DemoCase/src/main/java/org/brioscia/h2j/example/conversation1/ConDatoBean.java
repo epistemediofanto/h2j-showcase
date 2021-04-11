@@ -3,7 +3,7 @@ package org.brioscia.h2j.example.conversation1;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.brioscia.javaz.h2j.scope.ConversationRequest;
+import org.brioscia.javaz.h2j.scope.ConversationRequestContext;
 import org.brioscia.javaz.h2j.scope.ConversationRequestScoped;
 
 @Named
@@ -21,7 +21,7 @@ public class ConDatoBean {
 	private String valore42;
 
 	@Inject
-	private ConversationRequest conversation;
+	private ConversationRequestContext conversation;
 
 	public ConDatoBean() {
 		this.id = (int) (Math.random() * 1000);

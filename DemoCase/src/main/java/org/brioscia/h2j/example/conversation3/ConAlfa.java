@@ -4,14 +4,14 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.brioscia.javaz.h2j.scope.ConversationRequest;
+import org.brioscia.javaz.h2j.scope.ConversationRequestContext;
 
 @Named
 @RequestScoped
 public class ConAlfa {
 
 	@Inject
-	private ConversationRequest conversation;
+	private ConversationRequestContext conversation;
 	
 	private int id;
 	

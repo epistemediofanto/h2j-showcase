@@ -17,6 +17,7 @@
 		<mvn.jar.plugin.version>3.2.0</mvn.jar.plugin.version>
 		<mvn.war.plugin.version>3.1.0</mvn.war.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<h2j>0.0.9-SNAPSHOT</h2j>
 	</properties>
 
 	<dependencyManagement>
@@ -25,7 +26,7 @@
 			<dependency>
 				<groupId>org.brioscia.javaz</groupId>
 				<artifactId>h2j</artifactId>
-				<version>0.0.7-SNAPSHOT</version>
+				<version>${h2j}</version>
 				<scope>provided</scope>
 			</dependency>
 			
