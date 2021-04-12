@@ -6,9 +6,9 @@
 </head>
 <body>
 
-	<j:form action="#{download.download()}">
+	<j:form action="#{upload.upload()}" enctype="multipart/form-data">
 
-	Name <j:input value="#{download.nome}" placeholder="inserisci il file da scaricare" />
+	Name <j:input value="#{upload.nome}" placeholder="inserisci il file da caricare" type="file" />
 		<input type="submit" />
 
 	</j:form>
